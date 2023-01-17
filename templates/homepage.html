@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'homepage.js') }}"></script>
+    
+<script>
+    let data = {{data|tojson}} 
+    console.log(data)
+</script>
+
+<br>
+<div id="image_logo_div">
+    <img src="https://digital.hbs.edu/platform-digit/wp-content/uploads/sites/2/2020/02/sephora-collection.jpg" id="image_logo" alt="image_logo"> 
+</div>
+<div class="row">
+    <div class="col" id="homepage_title">Top 3 Popular Items in Sephora - Makeup, Skincare, Fragrance, Hair & Beauty Products</div>
+</div>
+
+<div class="row" id="items"></div>
+
+
+
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<div class="row view_title">
+    <div class="col-1"></div>
+    <div class="col-4">
+        <img src="{{item.image}}" alt="{{item.name}} in {{item.brand}}">
+    </div>
+    <div class="col-1"></div>
+    <div class="col-6" id="item_title">
+        <a href="/search_result/{{item.brand}}" class="link"><div class="view_brand">{{item.brand}}</div></a>
+        <div class="view_name">{{item.name}}</div>
+        <br>
+        <div class="view_price">${{item.price}}</div>
+        <br>
+        <div class="view_size">Size: {{item.size}}</div>
+        <br>
+        <div class="description">{{item.description}}</div>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col" id="info">
+        <div class="row" id="view_genre_div">
+            <div class="col">
+                {% for genre in item.genre %}
+                    <a href="/search_result/{{genre}}"class="genre_item">{{genre}}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row" id="highlight_title_div">
+            <div class="col">Hightlights:</div>
+        </div>
+        <div class="row" id="highlights_content_div">
+            <div class="col-1"></div>
+            <div class="col-11">
+                <div class="row">
+                    {% for highlight in item.highlights %}
+                        <div class="col-4 highlight_item">
+                            {{highlight}}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row" id="instruction_title_div">
+            <div class="col">Instructions:</div>
+        </div>
+        <div class="row" id="instruction_content_div">
+            <div class="col">
+                <ul>
+                    {% for step in item.instruction %}
+                        <li>{{step}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row" id="edit_btn_div">
+            <div class="col-5"></div>
+            <div class="col-2">
+                <a href="/edit/{{item.id}}" class="edit_btn">Edit</a>
+            </div>
+            <div class="col-5"></div>
+        </div>
+    </div>
+    
+</div>
+
+
+{% endblock %}
+
+
+

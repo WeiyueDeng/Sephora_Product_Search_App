@@ -1,0 +1,247 @@
+/*layout*/
+.search_input{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.search_input_div{
+    padding:0px;
+}
+.search_div{
+    padding:5px 10px;
+}
+.home_div{
+    text-align: center;
+}
+#search{
+    width: 100%;
+    height:100%;
+    background-color: black;
+    color:white;
+    font-family: Helvetica;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid white;
+}
+#search:hover{
+    width: 100%;
+    height:100%;
+    background-color: darkgrey;
+    color:white;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+#web_title{
+    color:white;
+    font-size:26px;
+    font-weight: bold;
+    font-family: Helvetica;
+}
+.navbar-custom {
+    background-color: black;
+    padding:22px;
+}
+#active{
+    color:white;
+    font-size: 20px;
+    font-family: Helvetica;
+}
+#active:hover{
+    color:lightgray;
+    font-size: 20px;
+    font-family: Helvetica;
+}
+.navbar-custom .navbar-text {
+    color: white;
+}
+/*homepage*/
+#image_logo_div{
+    text-align: center;
+}
+#image_logo{
+    width:60%;
+}
+#homepage_title{
+    font-size:30px;
+    font-weight: bold;
+    padding-top:25px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.link{
+    color:black;
+    font-family: Helvetica;
+}
+
+.link:hover{
+    text-decoration: underline;
+    color: black;
+    font-family: Helvetica;
+}
+
+.brand{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.name{
+    font-size: 18px;
+}
+.image_div, .brand, .name{
+    padding:0px;
+    text-align: center;
+    font-family: Helvetica;
+}
+.image{
+    width:50%;
+    height: 50%;
+    margin-bottom: 5px;
+}
+
+/*view*/
+.view_title{
+    padding-top: 40px;
+    font-family: Helvetica;
+}
+.view_brand{
+    font-weight: bold;
+    font-size: 16px;
+    font-family: Helvetica;
+}
+.view_name{
+    font-size: 18px;
+    font-family: Helvetica;
+}
+.view_price{
+    font-weight: bold;
+    font-size: 17px;
+    font-family: Helvetica;
+}
+.view_size{
+    font-size: 15px;
+    font-family: Helvetica;
+}
+
+.description{
+    font-size: 16px;
+    font-family: Helvetica;
+}
+.genre_item{
+    background-color: black;
+    color:white;
+    padding:0px 4px;
+    border: 1px solid black;
+    font-family: Helvetica;
+    font-size: 15px;
+}
+.genre_item:hover{
+    background-color: darkgray;
+    color:white;
+    padding:0px 4px;
+    border: 1px solid darkgray;
+    font-family: Helvetica;
+    font-size: 15px;
+    text-decoration: None;
+}
+
+#highlight_title_div, #instruction_title_div{
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: bold;
+    padding-top: 10px;
+}
+.highlight_item{
+    font-size: 15px;
+    font-family: Helvetica;
+    display: inline-block;
+    text-align: left;
+    padding-top: 10px;
+}
+.edit_btn{
+    background-color: black;
+    color:white;
+    border-radius: 2px;
+    padding:2px 10px;
+    font-size: 20px;
+}
+.edit_btn:hover{
+    background-color: darkgray;
+    color:white;
+    border-radius: 2px;
+    padding:2px 10px;
+    font-size: 20px;
+
+}
+/*search_result*/
+#search_title{
+    font-size:24px;
+    font-weight: bold;
+    padding-left:0px;
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+.search_brand,.search_name,.search_price{
+    text-align: left;
+    font-family: Helvetica;
+    font-size: 18px;
+}
+.search_brand,.search_price{
+    font-weight: bold;
+}
+.search_genre_tag{
+    text-align: left;
+    font-family: Helvetica;
+    font-size: 15px;
+}
+.highlight{
+    background-color: lightblue;
+}
+/*Add data*/
+#add_page_title{
+    font-weight: bold;;
+    font-family: Helvetica;
+    font-size: 26px;
+    padding-top: 25px;
+}
+.new_data{
+    width:70%;
+    border:1px solid black;
+    border-radius: 5px;
+}
+.data_tag{
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Helvetica;
+}
+#submit{
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border:1px solid black;
+    border-radius: 5px;
+}
+#submit:hover{
+    background-color: gray;
+    color: white;
+    font-size: 18px;
+    border:1px solid gray;
+    border-radius: 5px;
+}
+.error_msg{
+    color:red;
+}
+#add_data_result{
+    font-size: 20px;
+    font-family: Helvetica;
+}
+/*edit data*/
+#edit_page_title{
+    font-weight: bold;;
+    font-family: Helvetica;
+    font-size: 26px;
+    padding-top: 25px;
+}

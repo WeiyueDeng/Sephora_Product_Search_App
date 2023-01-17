@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'add.js') }}"></script>
+
+<script>
+    let data = {{data|tojson}} 
+    console.log(data)
+</script>
+
+<div class="row">
+    <div class="col" id="add_page_title">Add Data</div>
+</div>
+<br>
+<div class="container" id="add_data_inputs">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2 data_tag">
+            Id:  
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <input class="new_data" id="add_id" placeholder="Id">
+            <div id="id_error" class="error_msg"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2 data_tag">
+            Name:  
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <input class="new_data" id="add_name" placeholder="Name">
+            <div id="name_error" class="error_msg"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2 data_tag">
+            Brand: 
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <input class="new_data" id="add_brand" placeholder="Brand">
+            <div id="brand_error" class="error_msg"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2 data_tag">
+            Image Link:  
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <input class="new_data" id="add_image" placeholder="Image Link">
+            <div id="image_error" class="error_msg"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2 data_tag">
+            Price: 
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <input class="new_data" id="add_price" placeholder="Price with two decimal places">
+            <div id="price_error" class="error_msg"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2 data_tag">
+            Size: 
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <input class="new_data" id="add_size" placeholder="Size">
+            <div id="size_error" class="error_msg"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2 data_tag">
+            Description:  
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <input class="new_data" id="add_description" placeholder="Description">
+            <div id="description_error" class="error_msg"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2  data_tag">
+            Genre:  
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <input class="new_data" id="add_genre" placeholder="Genres: seperate by , ">
+            <div id="genre_error" class="error_msg"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2 data_tag">
+            Hightlights:  
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <input class="new_data" id="add_highlights" placeholder="Highlights: seperate by , ">
+            <div id="highlight_error" class="error_msg"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2 data_tag">
+            Instruction: 
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <input class="new_data" id="add_instruction" placeholder="Instruction: seperate by , ">
+            <div id="instruction_error" class="error_msg"></div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-2">
+            <button id="submit">Submit</button>
+        </div>
+        <div class="col-9"></div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class=col-11 id="add_data_result"></div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

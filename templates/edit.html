@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'edit.js') }}"></script>
+<script>
+    var id={{id|tojson}}
+    console.log(id)
+</script>
+
+<div class="row">
+    <div class="col" id="edit_page_title">Edit Data</div>
+</div>
+<br>
+<div class="row">
+    <div class="col" id="dialog_box">Are you sure to dicard all changes?</div>
+</div>
+<div class="container" id="edit_data_inputs">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2 data_tag">
+            Name:  
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <input class="new_data" id="edit_name" placeholder="Name" value="{{item.name}}">
+            <div id="edit_name_error" class="error_msg"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2 data_tag">
+            Brand: 
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <input class="new_data" id="edit_brand" placeholder="Brand" value="{{item.brand}}">
+            <div id="edit_brand_error" class="error_msg"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2 data_tag">
+            Image Link:  
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <input class="new_data" id="edit_image" placeholder="Image Link" value="{{item.image}}">
+            <div id="edit_image_error" class="error_msg"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2 data_tag">
+            Price: 
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <input class="new_data" id="edit_price" placeholder="Price with two decimal places" value="{{item.price}}">
+            <div id="edit_price_error" class="error_msg"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2 data_tag">
+            Size: 
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <input class="new_data" id="edit_size" placeholder="Size" value="{{item.size}}">
+            <div id="edit_size_error" class="error_msg"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2 data_tag">
+            Description:  
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <textarea class="new_data" id="edit_description" placeholder="Description" row="4" col="50">{{item.description}}</textarea>
+            <div id="edit_description_error" class="error_msg"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2  data_tag">
+            Genre:  
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <input class="new_data" id="edit_genre" placeholder="Genres: seperate by , " value="{{item.genre}}">
+            <div id="edit_genre_error" class="error_msg"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2 data_tag">
+            Hightlights:  
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <textarea class="new_data" id="edit_highlights" placeholder="Highlights: seperate by , " row="4" col="50">{{item.highlights}}</textarea>
+            <div id="edit_highlight_error" class="error_msg"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2 data_tag">
+            Instruction: 
+        </div>
+        <div class="col"></div>
+        <div class="col-8">
+            <textarea class="new_data" id="edit_instruction" placeholder="Instruction: seperate by , " row="4" col="50">{{item.instruction}}</textarea>
+            <div id="edit_instruction_error" class="error_msg"></div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-2">
+            <button id="edit_submit">Submit</button>
+        </div>
+        <div class="col-2">
+            <button id="edit_discard_changes">Discard Changes</button>
+        </div>
+        <div class="col-7"></div>
+    </div>
+</div>
+
+{% endblock %}
